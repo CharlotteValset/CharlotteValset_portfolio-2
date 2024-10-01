@@ -1,6 +1,6 @@
-import './src/style.css'
-import { projects } from "./src/data/projects";
-import { createProjectCard } from "./src/components/ProjectCard";
+import './style.css'
+import { projects } from "./data/projects";
+import { createProjectCard } from "./components/ProjectCard";
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
 <main>
