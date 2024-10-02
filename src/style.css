@@ -104,7 +104,7 @@ h1 {
 }
 
 .project-card:hover .description-container {
-  padding-top: 10px;
+  padding-top: 40px;
   color: #380622;
 }
 
