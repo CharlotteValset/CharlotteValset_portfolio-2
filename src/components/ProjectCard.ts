@@ -8,6 +8,7 @@ export const createProjectCard = (project: Project): HTMLElement => {
   cardImage.classList.add("card-image");
   cardImage.src = project.imageUrl;
   cardImage.alt = project.title;
+  cardImage.loading = "lazy";
   card.appendChild(cardImage);
 
   const title = document.createElement("h2");
