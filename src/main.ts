@@ -13,5 +13,18 @@ const projectsContainer = document.querySelector<HTMLDivElement>('#projects-cont
 
 projects.forEach(project => {
   const card = createProjectCard(project);
+
+  const descriptionContainer = card.querySelector<HTMLDivElement>('.description-container')!;
+
+  if (descriptionContainer) {
+    card.addEventListener("mouseenter", () => {
+      descriptionContainer.style.height = `${descriptionContainer.scrollHeight}px`;
+    });
+
+    card.addEventListener("mouseleave", () => {
+      descriptionContainer.style.height = "0";
+    });
+  }
+
   projectsContainer.appendChild(card);
 });
