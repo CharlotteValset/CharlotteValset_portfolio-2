@@ -16,15 +16,19 @@ export const createProjectCard = (project: Project): HTMLElement => {
   title.classList.add("shadows-into-light-regular");
   card.appendChild(title);
 
+  const descriptionContainer = document.createElement("div");
+  descriptionContainer.classList.add("description-container");
+  card.appendChild(descriptionContainer);
+
   project.description.forEach((paragraph) => {
     const descriptionParagraph = document.createElement("p");
     descriptionParagraph.textContent = paragraph;
-    card.appendChild(descriptionParagraph);
+    descriptionContainer.appendChild(descriptionParagraph);
   });
 
   const linkContainer = document.createElement("div");
   linkContainer.classList.add("link-container");
-  card.appendChild(linkContainer);
+  descriptionContainer.appendChild(linkContainer);
 
   const linkWebsite = document.createElement("a");
   linkWebsite.textContent = "Website";
