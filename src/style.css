@@ -28,8 +28,9 @@ body {
 }
 
 h1 {
-  font-size: 3.2em;
+  font-size: 5em;
   line-height: 1.1;
+  color: #870d5c;
 }
 
 #app {
@@ -47,30 +48,38 @@ h1 {
   margin-bottom: 1rem;
   text-align: center;
   width: 280px;
-  background-color: #ffffff;
+  background-color: #fcfcfc;
   box-shadow: 0px 1px 20px 0px rgba(0, 0, 0, 0.25);
 }
 
 .project-card img {
   width: 100%;
-  height: auto;
+  height: 200px;
 }
 
 .project-card h2 {
-  font-size: 2rem;
-  margin: 0.5rem 0;
+  font-size: 2.5rem;
+  margin: 0.1rem 0;
+  text-align: left;
 }
 
 .project-card p {
   font-size: 1rem;
-  margin-bottom: 1rem;
   text-align: left;
   margin: 12px 8px;
 }
 
 .project-card a {
-  color: rgb(157, 48, 193);
+  color: #fddff4;
   text-decoration: none;
+  background-color: #870d5c;
+  padding: 0.5rem 1rem;
+  border-radius: 15px 0px 15px 0px;
+}
+
+.project-card a:hover {
+  background-color: #fddff4;
+  color: #870d5c;
 }
 
 .projects-container {

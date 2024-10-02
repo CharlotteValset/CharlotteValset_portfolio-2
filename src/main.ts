@@ -1,10 +1,10 @@
-import './style.css'
+import "./style.css";
 import { projects } from "./data/projects";
 import { createProjectCard } from "./components/ProjectCard";
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
 <main>
-<h1>My projects</h1> 
+<h1 class="shadows-into-light-regular">My projects</h1> 
 <div id="projects-container" class="projects-container"></div>
 </main>
 `
