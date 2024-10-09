@@ -15,8 +15,8 @@
   --purple: #8d43ea;
   --darker-purple: #5c23a2;
   --border-3px: 1px solid;
-  --border-radius-15: 15px;
-  --heading-font: "Julius Sans One", sans-serif;
+  --border-radius-10: 10px;
+  --heading-font: "Shadows Into Light", cursive;
 }
 
 #app {
@@ -105,7 +105,7 @@ body {
 
 h1 {
   font-size: 2rem;
-  margin: 0.5rem 0;
+  margin: 6px 0;
   text-align: left;
   color: #870d5c;
 }
@@ -114,7 +114,7 @@ h2 {
   font-size: 3em;
   line-height: 1.1;
   color: #870d5c;
-  margin-bottom: 30px;
+  font-family: var(--heading-font);
 }
 
 h3 {
@@ -137,7 +137,7 @@ p {
   flex-direction: column;
   gap: 10px;
   justify-content: center;
-  margin-top: 123px;
+  margin-top: 85px;
 }
 
 .heroImg {
@@ -163,16 +163,64 @@ p {
   margin: 3px 0;
 }
 
-.contactLink {
+.contactLinkHero {
   font-size: 20px;
   margin-top: 10px;
   color: #a90c72;
   text-align: left;
   cursor: pointer;
+  margin-left: 0px;
 }
 
-.contactLink:hover {
+.contactLinkHero:hover {
   text-decoration: underline;
+}
+
+/*ABOUT ME*/
+
+.aboutMeWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  width: 90%;
+  margin: 10px auto 0px auto;
+}
+
+.aboutMeText {
+  margin: 10px auto;
+  text-align: left;
+}
+
+/* TECHNICAL SKILLS & CONTACT LINKS */
+
+.techStackList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  width: 90%;
+  max-width: 600px;
+  margin: 30px auto 40px auto;
+}
+
+.techStackItem {
+  background: #b44d90;
+  color: #f1f1f1;
+  border-radius: var(--border-radius-10);
+  padding: 5px 10px;
+}
+
+/* MY PROJECTS */
+.projects-heading {
+  margin-bottom: 40px;
+}
+
+#about,
+#techStack,
+#projects,
+#contact {
+  scroll-margin-top: 90px;
+  margin-top: 40px;
 }
 
 .project-card {
@@ -200,6 +248,7 @@ p {
   font-size: 2.5rem;
   margin: 0.1rem 0;
   text-align: center;
+  font-family: var(--heading-font);
 }
 
 .project-card p {
@@ -252,99 +301,31 @@ p {
   padding: 10px 0px 25px 0px;
 }
 
-/* #about,
-#projects,
-#contact,
-#section-2-tech,
-#section-2-cv {
-  scroll-margin-top: 60px;
-  margin: 20px auto;
-  width: 90%;
-  max-width: 479px;
-} */
-
-/*ABOUT ME*/
-
-.about-me-text {
-  margin: 20px auto;
-  width: 90%;
-}
-
-/* TECHNICAL SKILLS & CONTACT LINKS */
-
-.tech-skill-container,
-.contact-container {
+/* CONTACT */
+.contactLinkWrapper {
   display: flex;
-  gap: 24px;
-  justify-content: center;
-  margin: 20px;
-  flex-direction: row;
-  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 20px auto;
+  max-width: 600px;
 }
 
-.tech-skill,
-.contact-button {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 10px;
-  background: #f1f1f1;
-  border-radius: var(--border-radius-15);
-  height: 112px;
-  width: 94px;
-}
-
-.tech-skill p,
-.contact-button p {
-  font-size: 1rem;
+.contactLink {
+  font-size: 1.3rem;
+  color: #870d5c;
   text-align: center;
+  border: 1px solid #870d5c;
+  border-radius: 10px;
+  padding: 5px 10px;
+  width: 130px;
 }
 
-.tech-skill img,
-.contact-button img {
-  height: 50px;
-}
-
-.contact-button {
-  color: #000;
+.contactLink:hover {
+  background: #b44d90;
+  color: #f1f1f1;
   text-decoration: none;
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
 }
 
-.contact-button:hover {
-  box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.25);
-}
-
-/* CURRICULUM VITAE */
-
-.cv-container {
-  display: flex;
-  flex-direction: column;
-  max-width: 947px;
-  margin: auto;
-  width: 88%;
-}
-
-.cv-text {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-}
-
-.cv-h3 {
-  margin: 25px auto 20px auto;
-}
-
-.references-request {
-  margin: 20px auto;
-}
-
-/* PROJECTS */
-
-.fa-earth-americas,
-.fa-github {
-  margin-right: 5px;
-}
+/* FOOTER*/
 
 footer {
   margin: 15px auto;

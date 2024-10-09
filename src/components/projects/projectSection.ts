@@ -1,14 +1,18 @@
 import { projects } from "../../data/projects";
 import { createProjectCard } from "./ProjectCard";
 
-export const createProjectSection = (): HTMLElement => {
-  const section = document.createElement("section");
+export const ProjectSection = () => {
+  const projectContainer = document.querySelector<HTMLDivElement>('#projects');
 
-  const h2 = document.createElement("h2");
-  h2.classList.add("shadows-into-light-regular");
-  h2.id = "projects";
-  h2.textContent = "My Projects";
-  section.appendChild(h2);
+  if (!projectContainer) {
+    console.error('#hero element not found in the DOM');
+    return;
+  }
+
+  const projectsHeading = document.createElement("h2");
+  projectsHeading.textContent = "My Projects";
+  projectsHeading.classList.add("projects-heading");
+  projectContainer.appendChild(projectsHeading);
 
   const projectsContainer = document.createElement("div");
   projectsContainer.id = "projects-container";
@@ -19,6 +23,6 @@ export const createProjectSection = (): HTMLElement => {
     projectsContainer.appendChild(card);
   });
 
-  section.appendChild(projectsContainer);
-  return section;
+  projectContainer.appendChild(projectsContainer);
+  return projectContainer;
 };

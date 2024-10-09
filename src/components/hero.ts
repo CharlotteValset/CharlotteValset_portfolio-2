@@ -24,18 +24,18 @@ export const Hero = () => {
   heroText.textContent = 'Charlotte Valset';
   textWrapper.appendChild(heroText);
 
-  const heroSubText = document.createElement('h2');
+  const heroSubText = document.createElement('h3');
   heroSubText.classList.add('heroSubText');
   heroSubText.textContent = 'Front End Developer';
   textWrapper.appendChild(heroSubText);
 
-  const heroSubText2 = document.createElement('h2');
+  const heroSubText2 = document.createElement('h3');
   heroSubText2.classList.add('heroSubText');
   heroSubText2.textContent = 'UX Designer';
   textWrapper.appendChild(heroSubText2);
 
   const contactLink = document.createElement('a');
-  contactLink.classList.add('contactLink');
+  contactLink.classList.add('contactLinkHero');
   contactLink.textContent = '< Get in touch >';
   contactLink.href = 'mailto:charlottevalset@gmail.com';
   textWrapper.appendChild(contactLink);
