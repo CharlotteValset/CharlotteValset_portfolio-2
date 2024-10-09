@@ -37,6 +37,7 @@ export const Hero = () => {
   const contactLink = document.createElement('a');
   contactLink.classList.add('contactLink');
   contactLink.textContent = '< Get in touch >';
+  contactLink.href = 'mailto:charlottevalset@gmail.com';
   textWrapper.appendChild(contactLink);
 
 
