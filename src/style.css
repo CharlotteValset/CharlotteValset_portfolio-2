@@ -6,11 +6,25 @@
   color-scheme: light dark;
   color: rgba(60, 58, 58, 0.87);
   background-color: #f6f1f1;
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  --background: #f6f1f1;
+  --purple: #8d43ea;
+  --darker-purple: #5c23a2;
+  --border-3px: 1px solid;
+  --border-radius-10: 10px;
+  --heading-font: "Shadows Into Light", cursive;
+}
+
+#app {
+  max-width: 1280px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
 }
 
 .shadows-into-light-regular {
@@ -19,25 +33,194 @@
   font-style: normal;
 }
 
-body {
+html {
+  scroll-behavior: smooth;
+}
+
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  z-index: 2;
+  background-color: var(--background);
+  padding: 10px 0px;
+}
+nav {
   display: flex;
+  justify-content: space-around;
+  background-color: var(--background);
+  width: 100%;
+  top: 0;
+  padding: 7px 2px;
+  z-index: 2;
+  position: relative;
+}
+
+.nav-menu {
+  margin: 10px auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+ul {
+  list-style-type: none;
+  text-align: center;
+  background-color: var(--background);
+}
+
+a {
+  text-decoration: none;
+  color: #870d5c;
+  font-weight: 200;
+  font-size: 1rem;
+  margin: 0px 2px;
+}
+
+li a {
+  font-size: 1.1rem;
+  padding: 6px;
+}
+
+li a:hover {
+  text-decoration: underline;
+}
+
+body {
+  font-family: "IBM Plex Sans", sans-serif;
+  margin-top: 70px;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
 }
 
 h1 {
-  font-size: 5em;
-  line-height: 1.1;
+  font-size: 2rem;
+  margin: 6px 0;
+  text-align: left;
   color: #870d5c;
 }
 
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+h2 {
+  font-size: 3em;
+  line-height: 1.1;
+  color: #870d5c;
+  font-family: var(--heading-font);
+}
+
+h3 {
+  font-size: 3rem;
+}
+
+h4 {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+p {
+  font-size: 1.125rem;
+  font-weight: 200;
+}
+
+/* Hero */
+.heroWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 85px;
+}
+
+.heroImg {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  opacity: 80%;
+  margin: auto;
+  justify-content: center;
+}
+
+.textWrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 10px auto 30px auto;
+  text-align: left;
+}
+
+.heroSubText {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #363636;
+  margin: 3px 0;
+}
+
+.contactLinkHero {
+  font-size: 20px;
+  margin-top: 10px;
+  color: #a90c72;
+  text-align: left;
+  cursor: pointer;
+  margin-left: 0px;
+}
+
+.contactLinkHero:hover {
+  text-decoration: underline;
+}
+
+/*ABOUT ME*/
+
+.aboutMeWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  width: 90%;
+  margin: 10px auto 0px auto;
+}
+
+.aboutMeText {
+  margin: 10px auto;
+  text-align: left;
+}
+
+/* TECHNICAL SKILLS & CONTACT LINKS */
+
+.techStackList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  width: 90%;
+  max-width: 600px;
+  margin: 30px auto 40px auto;
+}
+
+.techStackItem {
+  background: #b44d90;
+  color: #f1f1f1;
+  border-radius: var(--border-radius-10);
+  padding: 5px 10px;
+}
+
+/* MY PROJECTS */
+.projects-heading {
+  margin-bottom: 40px;
+}
+
+#about,
+#techStack,
+#projects,
+#contact {
+  scroll-margin-top: 90px;
+  margin-top: 40px;
 }
 
 .project-card {
@@ -58,19 +241,20 @@ h1 {
 
 .project-card img {
   width: 100%;
-  height: 230px;
+  height: 210px;
 }
 
 .project-card h2 {
   font-size: 2.5rem;
   margin: 0.1rem 0;
   text-align: center;
+  font-family: var(--heading-font);
 }
 
 .project-card p {
   font-size: 1rem;
   text-align: left;
-  margin: 6px 12px;
+  margin: 2px 12px;
   padding: 6px 10px;
 }
 
@@ -91,28 +275,167 @@ h1 {
 }
 
 .description-container {
-  height: 0;
-  overflow: hidden;
-  transition: height 0.5s ease;
+  height: 100%;
+  padding: 10px 5px;
+  background-color: #fbe4e4;
   position: absolute;
   left: 0;
   right: 0;
-  bottom: 0;
-  padding: 0;
-  background-color: #fbe4e4;
+  top: 0;
   z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.5s ease;
 }
 
 .project-card:hover .description-container {
-  padding-top: 40px;
-  color: #380622;
-}
-
-.project-card:hover .description-container {
-  height: auto;
+  opacity: 1;
 }
 
 .link-container {
+  width: 100%;
   display: flex;
   justify-content: space-around;
+  padding: 10px 0px 25px 0px;
+}
+
+/* CONTACT */
+.contactLinkWrapper {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px auto;
+  max-width: 600px;
+}
+
+.contactLink {
+  font-size: 1.3rem;
+  color: #870d5c;
+  text-align: center;
+  border: 1px solid #870d5c;
+  border-radius: 10px;
+  padding: 5px 10px;
+  width: 130px;
+}
+
+.contactLink:hover {
+  background: #b44d90;
+  color: #f1f1f1;
+  text-decoration: none;
+}
+
+/* FOOTER*/
+
+footer {
+  margin: 15px auto;
+  text-align: center;
+  color: #870d5c;
+}
+
+/*DESKTOP*/
+@media only screen and (min-width: 800px) {
+  body {
+    margin-top: 100px;
+  }
+
+  .main-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .nav-menu {
+    gap: 60px;
+  }
+
+  a {
+    font-size: 1.2rem;
+    margin: 0px 15px;
+  }
+
+  li a {
+    font-size: 1.5rem;
+    padding: 6px 12px;
+  }
+
+  h1 {
+    font-size: 3.3rem;
+  }
+
+  h3,
+  .intro-text {
+    font-size: 2.25rem;
+  }
+
+  h4 {
+    font-size: 1.25rem;
+  }
+
+  p {
+    font-size: 1.25rem;
+  }
+
+  #about,
+  #projects,
+  #contact,
+  #section-2-tech,
+  #section-2-cv {
+    scroll-margin-top: 90px;
+    max-width: 900px;
+  }
+
+  .h2-underline::after {
+    content: "";
+    display: block;
+    border-bottom: 2px solid var(--purple);
+  }
+
+  /* INTRODUCTION */
+
+  .intro h1 {
+    margin: auto;
+    padding-bottom: 27px;
+  }
+
+  .intro-text {
+    text-align: left;
+  }
+
+  .get-in-touch_cta {
+    width: 147px;
+  }
+
+  /* ABOUT ME */
+
+  .about-me-text {
+    width: 85%;
+  }
+
+  /* TECHNICAL SKILLS & CONTACT LINKS */
+
+  .tech-skill-container {
+    justify-content: end;
+    margin: 20px 50px 20px 280px;
+  }
+
+  /* CURRICULUM VITAE */
+
+  .cv-container {
+    flex-direction: row;
+    gap: 210px;
+  }
+
+  .cv-text {
+    gap: 34px;
+  }
+
+  .cv-h3 {
+    margin: 50px auto 20px auto;
+  }
+
+  /*CONTACT*/
+  .contact-container {
+    justify-content: flex-start;
+    margin: 20px 20px 20px 50px;
+  }
 }

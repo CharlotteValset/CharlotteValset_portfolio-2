@@ -16,7 +16,7 @@ export const projects: Project[] = [
     id: 1,
     title: "BidOnIt",
     description: [
-      "BidOnIt, an auction site where you can bid on items you like and put your own items up for auction.",
+      "BidOnIt, bid on items you like and put your own items up for auction.",
       "This was my Semester Project 2 assignment, designed in Figma, built with Vite, Tailwind, vanilla JS and using Noroffs Rest API.",
     ],
     imageUrl: bidonitImage,
