@@ -1,30 +1,15 @@
 import "./style.css";
-import { projects } from "./data/projects";
-import { createProjectCard } from "./components/ProjectCard";
+import { createNavMenu } from "./components/nav/headerNav";
+import { footerNav } from "./components/nav/footerNav";
+import { createMainLayout } from "./layout/mainLayout";
 
-document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
-<main>
-<h1 class="shadows-into-light-regular">My projects</h1> 
-<div id="projects-container" class="projects-container"></div>
-</main>
-`
+const appContainer = document.querySelector<HTMLDivElement>("#app");
+if (appContainer) {
+  const mainLayout = createMainLayout();
+  appContainer.appendChild(mainLayout);
+} else {
+  console.error("#app element not found in the DOM");
+}
 
-const projectsContainer = document.querySelector<HTMLDivElement>('#projects-container')!;
-
-projects.forEach(project => {
-  const card = createProjectCard(project);
-
-  const descriptionContainer = card.querySelector<HTMLDivElement>('.description-container')!;
-
-  if (descriptionContainer) {
-    card.addEventListener("mouseenter", () => {
-      descriptionContainer.style.height = `${descriptionContainer.scrollHeight}px`;
-    });
-
-    card.addEventListener("mouseleave", () => {
-      descriptionContainer.style.height = "0";
-    });
-  }
-
-  projectsContainer.appendChild(card);
-});
+createNavMenu();
+footerNav();
