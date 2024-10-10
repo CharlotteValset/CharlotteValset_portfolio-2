@@ -1,3 +1,5 @@
+import headshot from '../assets/images/headshot.jpg';
+
 export const Hero = () => {
   const heroContainer = document.querySelector<HTMLDivElement>('#hero');
   if (!heroContainer) {
@@ -10,7 +12,7 @@ export const Hero = () => {
   heroContainer.appendChild(heroWrapper);
 
   const heroImg = document.createElement('img');
-  heroImg.src = "../../src/assets/images/headshot.jpg";
+  heroImg.src = headshot;
   heroImg.alt = 'Charlotte Valset';
   heroImg.classList.add('heroImg');
   heroWrapper.appendChild(heroImg);

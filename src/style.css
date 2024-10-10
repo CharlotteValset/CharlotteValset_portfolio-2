@@ -127,7 +127,7 @@ h4 {
 }
 
 p {
-  font-size: 1.125rem;
+  font-size: 1.25rem;
   font-weight: 200;
 }
 
@@ -144,7 +144,6 @@ p {
   width: 200px;
   height: 200px;
   border-radius: 50%;
-  opacity: 80%;
   margin: auto;
   justify-content: center;
 }
@@ -153,7 +152,7 @@ p {
   display: flex;
   flex-direction: column;
   margin: 10px auto 30px auto;
-  text-align: left;
+  text-align: center;
 }
 
 .heroSubText {
@@ -167,7 +166,7 @@ p {
   font-size: 20px;
   margin-top: 10px;
   color: #a90c72;
-  text-align: left;
+  text-align: center;
   cursor: pointer;
   margin-left: 0px;
 }
@@ -183,7 +182,7 @@ p {
   flex-direction: column;
   justify-content: left;
   width: 90%;
-  margin: 10px auto 0px auto;
+  margin: 0px auto 0px auto;
 }
 
 .aboutMeText {
@@ -305,6 +304,8 @@ p {
 .contactLinkWrapper {
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
   margin: 20px auto;
   max-width: 600px;
 }
@@ -333,15 +334,38 @@ footer {
   color: #870d5c;
 }
 
+@media (min-width: 768px) {
+  .project-card:hover .description-container {
+    display: block;
+  }
+}
+
+@media (max-width: 767px) {
+  .description-container {
+    display: none;
+  }
+
+  .project-card.show-description .description-container {
+    display: block;
+  }
+}
+
+/* TABLET */
+@media only screen and (min-width: 600px) {
+  li a {
+    font-size: 1.5rem;
+    padding: 6px 12px;
+  }
+
+  .heroWrapper {
+    margin: 95px auto 0 auto;
+  }
+}
+
 /*DESKTOP*/
 @media only screen and (min-width: 800px) {
   body {
     margin-top: 100px;
-  }
-
-  .main-wrapper {
-    display: flex;
-    flex-direction: column;
   }
 
   .nav-menu {
@@ -384,58 +408,33 @@ footer {
     max-width: 900px;
   }
 
-  .h2-underline::after {
-    content: "";
-    display: block;
-    border-bottom: 2px solid var(--purple);
+  /* HERO */
+  .heroWrapper {
+    flex-direction: row;
+    width: 80%;
+    margin: 15px auto 0 auto;
   }
 
-  /* INTRODUCTION */
-
-  .intro h1 {
-    margin: auto;
-    padding-bottom: 27px;
-  }
-
-  .intro-text {
+  .textWrapper {
+    margin: 10px auto 30px auto;
     text-align: left;
   }
 
-  .get-in-touch_cta {
-    width: 147px;
+  .heroSubText {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #363636;
+    margin: 3px 0;
+  }
+
+  .contactLinkHero {
+    margin-top: 10px;
+    text-align: left;
   }
 
   /* ABOUT ME */
-
-  .about-me-text {
+  .aboutMeText {
     width: 85%;
-  }
-
-  /* TECHNICAL SKILLS & CONTACT LINKS */
-
-  .tech-skill-container {
-    justify-content: end;
-    margin: 20px 50px 20px 280px;
-  }
-
-  /* CURRICULUM VITAE */
-
-  .cv-container {
-    flex-direction: row;
-    gap: 210px;
-  }
-
-  .cv-text {
-    gap: 34px;
-  }
-
-  .cv-h3 {
-    margin: 50px auto 20px auto;
-  }
-
-  /*CONTACT*/
-  .contact-container {
-    justify-content: flex-start;
-    margin: 20px 20px 20px 50px;
+    margin-left: 90px;
   }
 }

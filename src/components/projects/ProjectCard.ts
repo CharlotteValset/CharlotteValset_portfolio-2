@@ -48,7 +48,6 @@ const createLinkContainer = (project: Project): HTMLDivElement => {
   return linkContainer;
 };
 
-
 export const createProjectCard = (project: Project): HTMLElement => {
   const card = document.createElement("div");
   card.classList.add("project-card");
@@ -61,5 +60,23 @@ export const createProjectCard = (project: Project): HTMLElement => {
   descriptionContainer.appendChild(linkContainer);
   card.appendChild(descriptionContainer);
 
+  card.addEventListener("click", handleCardClick);
+
   return card;
+};
+
+const handleCardClick = (event: MouseEvent): void => {
+  const targetCard = event.currentTarget as HTMLElement;
+
+  if (targetCard.classList.contains("show-description")) {
+    targetCard.classList.remove("show-description");
+  } else {
+    targetCard.classList.add("show-description");
+  }
+
+  document.addEventListener("click", (e) => {
+    if (!(targetCard.contains(e.target as Node))) {
+      targetCard.classList.remove("show-description");
+    }
+  }, { once: true });
 };
