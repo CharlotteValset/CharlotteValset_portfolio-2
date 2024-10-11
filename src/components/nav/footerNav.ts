@@ -1,5 +1,5 @@
-export const footerNav = () => {
-  const footerContainer = document.querySelector<HTMLElement>('#footer');
+export const footerNav = (): void => {
+  const footerContainer: HTMLElement | null = document.querySelector<HTMLElement>('#footer');
 
   const footer = document.createElement("div");
   footer.classList.add("footer");
@@ -10,5 +10,4 @@ export const footerNav = () => {
   footer.appendChild(footerText);
 
   footerContainer?.append(footer);
-  return footerNav;
 }

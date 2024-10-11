@@ -1,5 +1,5 @@
 export const TechStack = (): void => {
-  const techStackContainer = document.querySelector('#techStack');
+  const techStackContainer: HTMLElement | null = document.querySelector('#techStack');
 
   if (!techStackContainer) {
     console.error('#techStack element not found in the DOM');

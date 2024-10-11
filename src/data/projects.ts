@@ -1,14 +1,14 @@
-import bidonitImage from "../assets/images/bidonit.png";
-import vivanceImage from "../assets/images/vivance.png";
-import holidazeImage from "../assets/images/holidaze.png";
+import bidonitImage from "../assets/images/bidonit.jpg";
+import vivanceImage from "../assets/images/vivance.jpg";
+import holidazeImage from "../assets/images/holidaze.jpg";
 
 export interface Project {
   id: number;
   title: string;
   description: string[];
   imageUrl: string;
-  linkWebsite: string;
-  linkGithub: string;
+  linkWebsite?: string;
+  linkGithub?: string;
 }
 
 export const projects: Project[] = [

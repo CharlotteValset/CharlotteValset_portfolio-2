@@ -1,5 +1,10 @@
 export function createNavMenu(): HTMLElement | null {
-  const headerContainer = document.querySelector<HTMLElement>('#header');
+  const headerContainer: HTMLElement | null = document.querySelector<HTMLElement>('#header');
+
+  if (!headerContainer) {
+    console.error('#header element not found in the DOM');
+    return null;
+  }
 
   const nav: HTMLElement = document.createElement('nav');
 
@@ -28,7 +33,7 @@ export function createNavMenu(): HTMLElement | null {
   });
 
   nav.appendChild(ul);
-  headerContainer?.appendChild(nav);
+  headerContainer.appendChild(nav);
 
   return nav;
 }

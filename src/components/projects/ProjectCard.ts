@@ -33,17 +33,21 @@ const createLinkContainer = (project: Project): HTMLDivElement => {
   const linkContainer = document.createElement("div");
   linkContainer.classList.add("link-container");
 
-  const linkWebsite = document.createElement("a");
-  linkWebsite.textContent = "Website";
-  linkWebsite.href = project.linkWebsite;
-  linkWebsite.target = "_blank";
-  linkContainer.appendChild(linkWebsite);
+  if (project.linkWebsite) {
+    const linkWebsite = document.createElement("a");
+    linkWebsite.textContent = "Website";
+    linkWebsite.href = project.linkWebsite;
+    linkWebsite.target = "_blank";
+    linkContainer.appendChild(linkWebsite);
+  }
 
-  const linkGithub = document.createElement("a");
-  linkGithub.textContent = "GitHub";
-  linkGithub.href = project.linkGithub;
-  linkGithub.target = "_blank";
-  linkContainer.appendChild(linkGithub);
+  if (project.linkGithub) {
+    const linkGithub = document.createElement("a");
+    linkGithub.textContent = "GitHub";
+    linkGithub.href = project.linkGithub;
+    linkGithub.target = "_blank";
+    linkContainer.appendChild(linkGithub);
+  }
 
   return linkContainer;
 };
@@ -68,15 +72,20 @@ export const createProjectCard = (project: Project): HTMLElement => {
 const handleCardClick = (event: MouseEvent): void => {
   const targetCard = event.currentTarget as HTMLElement;
 
+  if (!(targetCard instanceof HTMLElement)) return;
+
   if (targetCard.classList.contains("show-description")) {
     targetCard.classList.remove("show-description");
   } else {
     targetCard.classList.add("show-description");
   }
 
-  document.addEventListener("click", (e) => {
+  const handleOutsideClick = (e: MouseEvent) => {
     if (!(targetCard.contains(e.target as Node))) {
       targetCard.classList.remove("show-description");
+      document.removeEventListener("click", handleOutsideClick);
     }
-  }, { once: true });
+  };
+
+  document.addEventListener("click", handleOutsideClick, { once: true });
 };

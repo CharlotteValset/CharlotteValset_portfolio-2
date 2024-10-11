@@ -1,5 +1,5 @@
-export const Contact = () => {
-  const contactContainer = document.querySelector<HTMLDivElement>('#contact');
+export const Contact = (): void => {
+  const contactContainer: HTMLElement | null = document.querySelector<HTMLDivElement>('#contact');
   if (!contactContainer) {
     console.error('#contact element not found in the DOM');
     return;

@@ -1,7 +1,7 @@
 import headshot from '../assets/images/headshot.jpg';
 
-export const Hero = () => {
-  const heroContainer = document.querySelector<HTMLDivElement>('#hero');
+export const Hero = (): void => {
+  const heroContainer: HTMLElement | null = document.querySelector<HTMLDivElement>('#hero');
   if (!heroContainer) {
     console.error('#hero element not found in the DOM');
     return;
@@ -41,7 +41,4 @@ export const Hero = () => {
   contactLink.textContent = '< Get in touch >';
   contactLink.href = 'mailto:charlottevalset@gmail.com';
   textWrapper.appendChild(contactLink);
-
-
-
 };

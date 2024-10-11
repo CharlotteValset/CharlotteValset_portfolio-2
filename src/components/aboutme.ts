@@ -1,5 +1,5 @@
-export const AboutMe = () => {
-  const aboutMeContainer = document.querySelector('#about');
+export const AboutMe = (): void => {
+  const aboutMeContainer: HTMLElement | null = document.querySelector('#about');
   if (!aboutMeContainer) {
     console.error('#aboutMe element not found in the DOM');
     return;

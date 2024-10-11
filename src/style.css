@@ -12,9 +12,6 @@
   -moz-osx-font-smoothing: grayscale;
 
   --background: #f6f1f1;
-  --purple: #8d43ea;
-  --darker-purple: #5c23a2;
-  --border-3px: 1px solid;
   --border-radius-10: 10px;
   --heading-font: "Shadows Into Light", cursive;
 }
