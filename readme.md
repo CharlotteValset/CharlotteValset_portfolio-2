@@ -2,7 +2,8 @@
 
 I am a front-end developer student at Noroff and a UX designer, please check out my [Portfolio 2](https://valset-portfolio.netlify.app)
 
-![Screenshot of website](/src/assets/images/valset-portfolio_Screenshot.jpg)
+![Screenshot of website 1](/src/assets/images/valset-portfolio-1.jpg)
+![Screenshot of website 2](/src/assets/images/valset-portfolio-2.jpg)
 
 ## The assignment brief
 
