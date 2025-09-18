@@ -13,12 +13,20 @@ export const TechStack = (): void => {
   techStackList.classList.add('techStackList');
   techStackContainer.appendChild(techStackList);
 
-  const techstack = ['Figma', 'Visual Studio Code', 'HTML', 'CSS', 'Tailwind', 'Bootstrap', 'JavaScript', 'TypeScript', 'React', 'Wordpress', 'Rest API'];
+  const techstack = ['Figma', 'Visual Studio Code', 'HTML', 'CSS', 'Tailwind', 'Bootstrap', 'JavaScript', 'React', 'Wordpress', 'Rest API'];
   techstack.forEach((tech) => {
     const techStackItem = document.createElement('li');
     techStackItem.classList.add('techStackItem');
     techStackItem.textContent = tech;
     techStackList.appendChild(techStackItem);
+  }, techStackList);
+
+  const techstackLearning = ['TypeScript (ongoing)', 'Python (ongoing)'];
+  techstackLearning.forEach((tech) => {
+    const techStackLearningItem = document.createElement('li');
+    techStackLearningItem.classList.add('techStackLearningItem');
+    techStackLearningItem.textContent = tech;
+    techStackList.appendChild(techStackLearningItem);
   }, techStackList);
 
 };
