@@ -2,8 +2,8 @@
 
 I am a front-end developer student at Noroff and a UX designer, please check out my [Portfolio 2](https://valset-portfolio.netlify.app) assignment.
 
-![Screenshot of website 1](/src/assets/images/valset-portfolio-1.jpg)
-![Screenshot of website 2](/src/assets/images/valset-portfolio-2.jpg)
+![Screenshot of website 1](/src/assets/images/Screenshot-CV-1.png)
+![Screenshot of website 2](/src/assets/images/Screenshot-CV-2.png)
 
 ## The assignment brief
 
@@ -82,6 +82,6 @@ Contributions are welcome! Please follow the guidelines below:
 
 Please contact me through:
 
-[My Portfolio page](https://charlottevalset.no)
+[My Portfolio page](https://valset-portfolio.netlify.app)
 
 [My LinkedIn page](https://www.linkedin.com/in/charlotte-valset-6195b521a/)
