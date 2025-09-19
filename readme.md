@@ -1,6 +1,6 @@
 # Charlotte Valset - Portfolio 2
 
-I am a front-end developer student at Noroff and a UX designer, please check out my [Portfolio 2](https://valset-portfolio.netlify.app) assignment.
+I am a front-end developer student at Noroff and a UX designer, please check out my [Portfolio 2](https://cv-portfolio2.netlify.app/) assignment.
 
 ![Screenshot of website 1](/src/assets/images/Screenshot-CV-1.png)
 ![Screenshot of website 2](/src/assets/images/Screenshot-CV-2.png)
