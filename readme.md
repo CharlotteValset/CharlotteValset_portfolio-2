@@ -34,7 +34,7 @@ I designed and developed a fully responsive website using Vite, CSS and vanilla 
 
 ### Project links
 
-[Deployed website](https://valset-portfolio.netlify.app)
+[Deployed website](https://cv-portfolio2.netlify.app/)
 
 [GitHub repository](https://github.com/CharlotteValset/CharlotteValset_portfolio-2)
 
@@ -82,6 +82,6 @@ Contributions are welcome! Please follow the guidelines below:
 
 Please contact me through:
 
-[My Portfolio page](https://valset-portfolio.netlify.app)
+[My Portfolio page](https://cv-portfolio2.netlify.app/)
 
 [My LinkedIn page](https://www.linkedin.com/in/charlotte-valset-6195b521a/)
